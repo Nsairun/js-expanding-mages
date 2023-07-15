@@ -1,14 +1,14 @@
-const galleryCards = document.querySelector(".gallery")
+const gallery = document.querySelectorAll(".gallery")
 
- galleryCards.forEach((galleryCard) => {
+ gallery.forEach((galleryCard) => {
      galleryCard.addEventListener("click", () => {
-        removeActiveSpan()
+        removeActiveClass()
         galleryCard.classList.add("active")
     })
  })
 
-function removeActiveSpan() {
-        galleryCards.forEach(galleryCard => {
+function removeActiveClass() {
+        gallery.forEach(galleryCard => {
         galleryCard.addEventListener("click", () => {
             galleryCard.classList.remove("active")
         })
